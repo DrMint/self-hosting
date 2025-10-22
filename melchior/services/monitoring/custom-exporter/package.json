@@ -1,0 +1,16 @@
+{
+  "name": "node-zpool",
+  "private": true,
+  "scripts": {
+    "start": "bun run src/app.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "systeminformation": "^5.27.11"
+  }
+}

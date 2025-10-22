@@ -1,0 +1,31 @@
+# To see all available options, please visit the docs:
+# https://docs.digpangolin.com/self-host/advanced/config-file 
+
+gerbil:
+    start_port: 51820
+    base_endpoint: "pangolin.barillot.net"
+
+app:
+    dashboard_url: "https://pangolin.barillot.net"
+    log_level: "info"
+    telemetry:
+        anonymous_usage: true
+
+domains:
+    domain1:
+        base_domain: "barillot.net"
+        cert_resolver: "letsencrypt"
+
+server:
+    secret: "CHANGE_ME"
+    cors:
+        origins: ["https://pangolin.barillot.net"]
+        methods: ["GET", "POST", "PUT", "DELETE", "PATCH"]
+        allowed_headers: ["X-CSRF-Token", "Content-Type"]
+        credentials: false
+
+flags:
+    require_email_verification: false
+    disable_signup_without_invite: true
+    disable_user_create_org: false
+    allow_raw_resources: true

@@ -1,0 +1,45 @@
+global:
+  scrape_interval: 1m
+
+scrape_configs:
+  - job_name: 'zfs-exporter'
+    scrape_interval: 1m
+    metrics_path: /zfs
+    static_configs:
+      - targets: ['host.docker.internal:8000']
+
+  - job_name: 'smart-hdd-exporter'
+    scrape_interval: 1m
+    metrics_path: /smart/hdd
+    static_configs:
+      - targets: ['host.docker.internal:8000']
+
+  - job_name: 'smart-ssd-exporter'
+    scrape_interval: 1m
+    metrics_path: /smart/ssd
+    static_configs:
+      - targets: ['host.docker.internal:8000']
+
+  - job_name: 'zpool-exporter'
+    scrape_interval: 1m
+    metrics_path: /zpool
+    static_configs:
+      - targets: ['host.docker.internal:8000']
+
+  - job_name: 'hwmon-exporter'
+    scrape_interval: 1m
+    metrics_path: /hwmon
+    static_configs:
+      - targets: ['host.docker.internal:8000']
+
+  - job_name: 'sysinfo-exporter'
+    scrape_interval: 1m
+    metrics_path: /sysinfo
+    static_configs:
+      - targets: ['host.docker.internal:8000']
+
+  - job_name: 'blockstat-exporter'
+    scrape_interval: 1m
+    metrics_path: /blockstat
+    static_configs:
+      - targets: ['host.docker.internal:8000']
